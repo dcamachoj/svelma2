@@ -1,6 +1,6 @@
 {
 	"name": "svelma2",
-	"version": "0.0.1",
+	"version": "2.0.1",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -11,7 +11,9 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test": "vitest",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"test:integration": "playwright test",
+		"build-push": "npm run build && git add . && git commit -am dev && git push"
 	},
 	"exports": {
 		".": {
@@ -28,6 +30,8 @@
 		"svelte": "^4.0.0"
 	},
 	"devDependencies": {
+		"@mdi/js": "^7.3.67",
+		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/package": "^2.0.0",
