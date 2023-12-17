@@ -1,6 +1,6 @@
 {
 	"name": "svelma2",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -25,7 +25,8 @@
 	"files": [
 		"dist",
 		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*"
+		"!dist/**/*.spec.*",
+		"src"
 	],
 	"peerDependencies": {
 		"svelte": "^4.0.0"
